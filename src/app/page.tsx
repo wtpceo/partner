@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { 
   Camera,
@@ -8,12 +9,11 @@ import {
   Users,
   Youtube,
   Check,
-  ArrowRight,
   ChevronRight,
   MessageCircle,
   Target,
   CheckCircle,
-  Clock
+  MessageSquare
 } from "lucide-react";
 import { useState } from "react";
 
@@ -108,7 +108,7 @@ export default function Home() {
               </span>
               <span className="text-sm sm:text-lg text-gray-400">×</span>
               <span className="text-sm sm:text-xl font-semibold text-gray-900">
-                SH인터내셔널
+                SH인터내셔날
               </span>
             </div>
             <div className="hidden md:flex items-center space-x-8">
@@ -121,9 +121,15 @@ export default function Home() {
               <a href="#contact" className="text-sm text-gray-600 hover:text-gray-900 transition">
                 문의
               </a>
-              <button className="px-4 py-2 bg-gray-900 text-white text-sm rounded-full hover:bg-gray-800 transition">
-                무료 상담
-              </button>
+              <a 
+                href="http://pf.kakao.com/_QUTxcb/chat" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="px-4 py-2 bg-yellow-400 text-black text-sm font-bold rounded-full hover:bg-yellow-300 transition inline-flex items-center gap-2"
+              >
+                <MessageSquare className="w-4 h-4" />
+                실시간 상담
+              </a>
             </div>
           </div>
         </div>
@@ -144,7 +150,7 @@ export default function Home() {
               <span className="text-red-600">특별한 가격으로</span>
             </h1>
             <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto mb-10 px-4 sm:px-0">
-              SH인터내셔널과 함께라면 최고의 품질을 합리적인 가격에 만나실 수 있습니다.
+              SH인터내셔날과 함께라면 최고의 품질을 합리적인 가격에 만나실 수 있습니다.
             </p>
             <div className="flex justify-center">
               <a href="#services" className="px-8 py-3 bg-red-600 text-white rounded-full hover:bg-red-700 transition inline-block">
@@ -155,7 +161,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* SH인터내셔널 Special Offer Banner */}
+      {/* SH인터내셔날 Special Offer Banner */}
       <section className="bg-gradient-to-r from-red-600 to-red-700 py-8">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <motion.div
@@ -166,14 +172,14 @@ export default function Home() {
           >
             <div className="flex items-center justify-center gap-2 mb-3">
               <span className="text-xl sm:text-2xl">🎉</span>
-              <h3 className="text-xl sm:text-2xl font-bold">SH인터내셔널 특별 혜택</h3>
+              <h3 className="text-xl sm:text-2xl font-bold">SH인터내셔날 특별 혜택</h3>
               <span className="text-xl sm:text-2xl">🎉</span>
             </div>
             <p className="text-2xl sm:text-3xl font-black mb-2">
               모든 서비스 <span className="text-yellow-300">30% 할인</span>
             </p>
             <p className="text-base sm:text-lg opacity-90 px-4 sm:px-0">
-              SH인터내셔널을 통해 문의하시면 위즈더플래닝의 모든 서비스를 특별 할인가로 이용하실 수 있습니다
+              SH인터내셔날을 통해 문의하시면 위즈더플래닝의 모든 서비스를 특별 할인가로 이용하실 수 있습니다
             </p>
             <div className="mt-4 inline-flex items-center gap-2 bg-white/20 backdrop-blur px-4 py-2 rounded-full">
               <span className="text-sm font-medium">파트너십 프로그램</span>
@@ -207,10 +213,11 @@ export default function Home() {
                 className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all cursor-pointer"
               >
                 <div className="aspect-video relative overflow-hidden bg-gray-100">
-                  <img 
+                  <Image 
                     src={service.image} 
                     alt={service.title}
-                    className="w-full h-full object-cover"
+                    fill
+                    className="object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
                   <div className="absolute bottom-4 left-4 text-white">
@@ -236,7 +243,7 @@ export default function Home() {
                         {service.priceLabel}
                       </div>
                       <div className="mt-2 p-2 bg-red-50 rounded-lg">
-                        <div className="text-xs text-red-600 font-medium">SH인터내셔널 제휴가</div>
+                        <div className="text-xs text-red-600 font-medium">SH인터내셔날 제휴가</div>
                         <div className="text-base sm:text-lg font-bold text-red-700">
                           {service.id === 0 && "56만원"}
                           {service.id === 1 && "63만원"}
@@ -373,16 +380,53 @@ export default function Home() {
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
             지금 시작하세요
           </h2>
-          <p className="text-lg sm:text-xl text-gray-300 mb-10">
+          <p className="text-lg sm:text-xl text-gray-300 mb-4">
             무료 상담을 통해 최적의 솔루션을 제안해드립니다
           </p>
-          <div className="flex justify-center">
-            <a href="https://obsidian-quit-df6.notion.site/20938318fea6802e83b3c1d2add64777" target="_blank" rel="noopener noreferrer" className="px-8 py-3 border border-white/30 text-white rounded-full hover:bg-white/10 transition inline-block">
+          <div className="bg-white/10 rounded-lg p-4 mb-10 max-w-lg mx-auto backdrop-blur">
+            <p className="text-sm text-yellow-300 mb-2">💬 카카오톡 실시간 상담 안내</p>
+            <p className="text-xs text-gray-300">
+              상담 시 아래 정보를 함께 보내주세요:
+              <br />• 상호명
+              <br />• 전화번호
+              <br />• 문의 내용
+            </p>
+          </div>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a 
+              href="http://pf.kakao.com/_QUTxcb/chat" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="px-8 py-4 bg-yellow-400 text-black font-bold rounded-full hover:bg-yellow-300 transition inline-flex items-center justify-center gap-2 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+            >
+              <MessageSquare className="w-5 h-5" />
+              카카오톡 실시간 상담
+            </a>
+            <a 
+              href="https://obsidian-quit-df6.notion.site/26738318fea680c5978ff75286208b63" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="px-8 py-3 border border-white/30 text-white rounded-full hover:bg-white/10 transition inline-block"
+            >
               레퍼런스 보러가기
             </a>
           </div>
         </div>
       </section>
+
+      {/* Floating Kakao Button */}
+      <a
+        href="http://pf.kakao.com/_QUTxcb/chat"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed bottom-6 right-6 z-50 bg-yellow-400 text-black p-4 rounded-full shadow-2xl hover:bg-yellow-300 transition-all transform hover:scale-110 flex items-center justify-center group"
+        aria-label="카카오톡 실시간 상담"
+      >
+        <MessageSquare className="w-6 h-6" />
+        <span className="absolute right-full mr-3 bg-black text-white text-sm py-2 px-3 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+          카카오톡 실시간 상담
+        </span>
+      </a>
 
       {/* Footer */}
       <footer className="py-12 bg-white border-t border-gray-100">
