@@ -245,12 +245,12 @@ export default function Home() {
                       <div className="mt-2 p-2 bg-red-50 rounded-lg">
                         <div className="text-xs text-red-600 font-medium">SH인터내셔날 제휴가</div>
                         <div className="text-base sm:text-lg font-bold text-red-700">
-                          {service.id === 0 && "56만원"}
+                          {service.id === 0 && "40만원"}
                           {service.id === 1 && "63만원"}
                           {service.id === 2 && "63만원"}
                           {service.id === 3 && "140만원"}
                         </div>
-                        <div className="text-xs text-red-500">30% 할인</div>
+                        <div className="text-xs text-red-500">50% 할인</div>
                       </div>
                     </div>
                   </div>
