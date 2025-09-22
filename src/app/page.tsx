@@ -250,7 +250,7 @@ export default function Home() {
                           {service.id === 2 && "63만원"}
                           {service.id === 3 && "140만원"}
                         </div>
-                        <div className="text-xs text-red-500">50% 할인</div>
+                        <div className="text-xs text-red-500">30% 할인</div>
                       </div>
                     </div>
                   </div>
