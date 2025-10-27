@@ -41,9 +41,9 @@ export default function Home() {
       title: "배달앱관리 (연 결제)",
       icon: <Video className="w-8 h-8" />,
       description: "배민, 쿠팡이츠 등 모든 배달 플랫폼 통합 관리",
-      price: "월 15만원",
+      price: "월 30만원",
       priceLabel: "연 구독형",
-      discountPrice: "월 10만원",
+      discountPrice: "월 15만원",
       image: "/sns-video.png",
       features: [
         "경쟁업체조사 & 배달 상권 분석",
