@@ -3,11 +3,9 @@
 import React from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
-import { 
+import {
   Camera,
   Video,
-  Users,
-  Youtube,
   Check,
   ChevronRight,
   MessageCircle,
@@ -23,11 +21,12 @@ export default function Home() {
   const services = [
     {
       id: 0,
-      title: "배달앱 운영 대행",
+      title: "배달앱관리 (월 결제)",
       icon: <Camera className="w-8 h-8" />,
       description: "배민, 쿠팡이츠 등 모든 배달 플랫폼 통합 관리",
-      price: "40만원",
+      price: ["사진 촬영비 50만원", "월 40만원"],
       priceLabel: "월 구독형",
+      discountPrice: ["보증금 30만원", "월 20만원"],
       image: "/food-photography.png",
       features: [
         "경쟁업체조사 & 배달 상권 분석",
@@ -39,44 +38,19 @@ export default function Home() {
     },
     {
       id: 1,
-      title: "사진,영상 촬영",
+      title: "배달앱관리 (연 결제)",
       icon: <Video className="w-8 h-8" />,
-      description: "전문 푸드그래퍼의 감각적인 메뉴 촬영",
-      price: "50만원",
-      priceLabel: "패키지",
+      description: "배민, 쿠팡이츠 등 모든 배달 플랫폼 통합 관리",
+      price: "월 15만원",
+      priceLabel: "연 구독형",
+      discountPrice: "월 10만원",
       image: "/sns-video.png",
       features: [
-        "각 배달앱 가이드에 맞는 촬영",
-        "네이버 플레이스 전용 연출샷",
-        "SNS최적 영상 3개",
-        "인쇄용 촬영 선택"
-      ]
-    },
-    {
-      id: 2,
-      title: "댓글 자동 관리",
-      icon: <Users className="w-8 h-8" />,
-      description: "AI 기반 스마트리뷰 관리 시스템",
-      price: "10만원",
-      priceLabel: "월 구독형",
-      image: "/u4741571414_user_interface_dashboard_for_AI-powered_comment_m_277c01ee-24d6-474b-88f9-a653dd99a865_0.png",
-      features: [
-        "월/수/금 댓글 관리",
-        "배민 민원 리뷰 게시중단",
-        "맞춤형 자동 답변 시스템"
-      ]
-    },
-    {
-      id: 3,
-      title: "토탈 케어 패키지",
-      icon: <Youtube className="w-8 h-8" />,
-      description: "올인원 프리미엄 통합 관리 서비스",
-      price: "50만원",
-      priceLabel: "월 구독형",
-      image: "/u4741571414_premium_all-in-one_management_solution_concept_cl_a51cc57e-8862-4318-8052-c748b4c06e9c_0.png",
-      features: [
-        "모든 배달플랫폼 통합 관리",
-        "네이버 플레이스 관리"
+        "경쟁업체조사 & 배달 상권 분석",
+        "메뉴 최적화 & 프로모션 기획/실행",
+        "데이터 분석 & 트랜드 분석",
+        "각종 이미지 제작",
+        "배달앱에 필요한 모든 운영 대행"
       ]
     }
   ];
@@ -222,7 +196,15 @@ export default function Home() {
                     </div>
                     <div className="sm:text-right">
                       <div className="text-xl sm:text-2xl font-bold text-gray-900">
-                        {service.price}
+                        {Array.isArray(service.price) ? (
+                          <div className="flex flex-col">
+                            {service.price.map((p, idx) => (
+                              <div key={idx}>{p}</div>
+                            ))}
+                          </div>
+                        ) : (
+                          service.price
+                        )}
                       </div>
                       <div className="text-sm text-gray-500">
                         {service.priceLabel}
@@ -230,10 +212,15 @@ export default function Home() {
                       <div className="mt-2 p-2 bg-red-50 rounded-lg">
                         <div className="text-xs text-red-600 font-medium">위플 파트너즈 제휴가</div>
                         <div className="text-base sm:text-lg font-bold text-red-700">
-                          {service.id === 0 && "20만원"}
-                          {service.id === 1 && "0원"}
-                          {service.id === 2 && "5만원"}
-                          {service.id === 3 && "30만원"}
+                          {Array.isArray(service.discountPrice) ? (
+                            <div className="flex flex-col">
+                              {service.discountPrice.map((p, idx) => (
+                                <div key={idx}>{p}</div>
+                              ))}
+                            </div>
+                          ) : (
+                            service.discountPrice
+                          )}
                         </div>
                         <div className="text-xs text-red-500">특별 할인</div>
                       </div>
