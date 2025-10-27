@@ -23,75 +23,60 @@ export default function Home() {
   const services = [
     {
       id: 0,
-      title: "사진 촬영",
+      title: "배달앱 운영 대행",
       icon: <Camera className="w-8 h-8" />,
-      description: "네이버플레이스, 배달앱, 매장 공간 전문 촬영",
-      price: "80만원",
-      priceLabel: "부터",
+      description: "배민, 쿠팡이츠 등 모든 배달 플랫폼 통합 관리",
+      price: "40만원",
+      priceLabel: "월 구독형",
       image: "/food-photography.png",
       features: [
-        "네이버플레이스용 모음컷",
-        "배달앱용 메뉴 사진", 
-        "매장 공간 사진 촬영",
-        "인쇄 포스터용 고해상도 컷",
-        "컷수 제한 없음",
-        "원본 파일 제공",
-        "용도에 맞는 편집본 제공",
-        "지방은 별도 경비 발생"
+        "경쟁업체조사 & 배달 상권 분석",
+        "메뉴 최적화 & 프로모션 기획/실행",
+        "데이터 분석 & 트랜드 분석",
+        "각종 이미지 제작",
+        "배달앱에 필요한 모든 운영 대행"
       ]
     },
     {
       id: 1,
-      title: "SNS 영상 콘텐츠",
+      title: "사진,영상 촬영",
       icon: <Video className="w-8 h-8" />,
-      description: "인스타그램, 틱톡, 유튜브 쇼츠 최적화 영상",
-      price: "90만원",
-      priceLabel: "3편 패키지",
+      description: "전문 푸드그래퍼의 감각적인 메뉴 촬영",
+      price: "50만원",
+      priceLabel: "패키지",
       image: "/sns-video.png",
       features: [
-        "15~30초 짧은 영상 3편",
-        "SNS 최적화 포맷",
-        "자막 및 음악 삽입",
-        "성우 더빙 포함",
-        "편집본 + 원본 제공",
-        "광고 운영 대행 가능(+20만원)",
-        "원하는 채널에 직접 영상 업로드",
-        "충전된 광고비 운영 대행",
-        "광고 성과 보고서 제공"
+        "각 배달앱 가이드에 맞는 촬영",
+        "네이버 플레이스 전용 연출샷",
+        "SNS최적 영상 3개",
+        "인쇄용 촬영 선택"
       ]
     },
     {
       id: 2,
-      title: "인플루언서 먹방",
+      title: "댓글 자동 관리",
       icon: <Users className="w-8 h-8" />,
-      description: "푸드 인플루언서와 함께하는 먹방 콘텐츠",
-      price: "90만원",
-      priceLabel: "+ 섭외비",
-      image: "/mukbang-scene.png",
+      description: "AI 기반 스마트리뷰 관리 시스템",
+      price: "10만원",
+      priceLabel: "월 구독형",
+      image: "/u4741571414_user_interface_dashboard_for_AI-powered_comment_m_277c01ee-24d6-474b-88f9-a653dd99a865_0.png",
       features: [
-        "팔로워 기반 탄탄한 인플루언서",
-        "매장 방문 먹방 촬영",
-        "유튜브, 인스타그램, 틱톡 업로드",
-        "브랜드 신뢰도 상승",
-        "신규 고객 유입 극대화",
-        "조회수 데이터 리포트 제공"
+        "월/수/금 댓글 관리",
+        "배민 민원 리뷰 게시중단",
+        "맞춤형 자동 답변 시스템"
       ]
     },
     {
       id: 3,
-      title: "유튜브 채널 운영",
+      title: "토탈 케어 패키지",
       icon: <Youtube className="w-8 h-8" />,
-      description: "기획부터 운영까지 올인원 유튜브 대행",
-      price: "200만원",
+      description: "올인원 프리미엄 통합 관리 서비스",
+      price: "50만원",
       priceLabel: "월 구독형",
-      image: "/youtube-channel.png",
+      image: "/u4741571414_premium_all-in-one_management_solution_concept_cl_a51cc57e-8862-4318-8052-c748b4c06e9c_0.png",
       features: [
-        "월 1회 촬영 총 4편 제작",
-        "7분 내외 영상과 숏폼",
-        "유튜브 알고리즘 최적화",
-        "썸네일, 제목, 해시태그 세팅",
-        "꾸준한 채널 운영 관리",
-        "성과 분석 리포트 제공"
+        "모든 배달플랫폼 통합 관리",
+        "네이버 플레이스 관리"
       ]
     }
   ];
@@ -108,7 +93,7 @@ export default function Home() {
               </span>
               <span className="text-sm sm:text-lg text-gray-400">×</span>
               <span className="text-sm sm:text-xl font-semibold text-gray-900">
-                SH인터내셔날
+                위플 파트너즈
               </span>
             </div>
             <div className="hidden md:flex items-center space-x-8">
@@ -150,7 +135,7 @@ export default function Home() {
               <span className="text-red-600">특별한 가격으로</span>
             </h1>
             <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto mb-10 px-4 sm:px-0">
-              SH인터내셔날과 함께라면 최고의 품질을 합리적인 가격에 만나실 수 있습니다.
+              위플 파트너즈와 함께라면 최고의 품질을 합리적인 가격에 만나실 수 있습니다.
             </p>
             <div className="flex justify-center">
               <a href="#services" className="px-8 py-3 bg-red-600 text-white rounded-full hover:bg-red-700 transition inline-block">
@@ -161,7 +146,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* SH인터내셔날 Special Offer Banner */}
+      {/* 위플 파트너즈 Special Offer Banner */}
       <section className="bg-gradient-to-r from-red-600 to-red-700 py-8">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <motion.div
@@ -172,14 +157,14 @@ export default function Home() {
           >
             <div className="flex items-center justify-center gap-2 mb-3">
               <span className="text-xl sm:text-2xl">🎉</span>
-              <h3 className="text-xl sm:text-2xl font-bold">SH인터내셔날 특별 혜택</h3>
+              <h3 className="text-xl sm:text-2xl font-bold">위플 파트너즈 특별 혜택</h3>
               <span className="text-xl sm:text-2xl">🎉</span>
             </div>
             <p className="text-2xl sm:text-3xl font-black mb-2">
-              모든 서비스 <span className="text-yellow-300">30% 할인</span>
+              모든 서비스 <span className="text-yellow-300">할인</span>
             </p>
             <p className="text-base sm:text-lg opacity-90 px-4 sm:px-0">
-              SH인터내셔날을 통해 문의하시면 위즈더플래닝의 모든 서비스를 특별 할인가로 이용하실 수 있습니다
+              위플 파트너즈를 통해 문의하시면 위즈더플래닝의 모든 서비스를 특별 할인가로 이용하실 수 있습니다
             </p>
             <div className="mt-4 inline-flex items-center gap-2 bg-white/20 backdrop-blur px-4 py-2 rounded-full">
               <span className="text-sm font-medium">파트너십 프로그램</span>
@@ -243,14 +228,14 @@ export default function Home() {
                         {service.priceLabel}
                       </div>
                       <div className="mt-2 p-2 bg-red-50 rounded-lg">
-                        <div className="text-xs text-red-600 font-medium">SH인터내셔날 제휴가</div>
+                        <div className="text-xs text-red-600 font-medium">위플 파트너즈 제휴가</div>
                         <div className="text-base sm:text-lg font-bold text-red-700">
-                          {service.id === 0 && "40만원"}
-                          {service.id === 1 && "63만원"}
-                          {service.id === 2 && "63만원"}
-                          {service.id === 3 && "140만원"}
+                          {service.id === 0 && "20만원"}
+                          {service.id === 1 && "0원"}
+                          {service.id === 2 && "5만원"}
+                          {service.id === 3 && "30만원"}
                         </div>
-                        <div className="text-xs text-red-500">30% 할인</div>
+                        <div className="text-xs text-red-500">특별 할인</div>
                       </div>
                     </div>
                   </div>
@@ -308,32 +293,32 @@ export default function Home() {
             
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8 relative">
               {[
-                { 
-                  step: "01", 
-                  title: "상담", 
-                  desc: "고객님의 니즈를 파악합니다",
-                  detail: "요구사항 분석 · 목표 설정",
+                {
+                  step: "01",
+                  title: "상담",
+                  desc: "카카오톡으로 담당자 배정",
+                  detail: "전담 매니저 · 맞춤 컨설팅",
                   icon: <MessageCircle className="w-8 h-8" />
                 },
-                { 
-                  step: "02", 
-                  title: "기획", 
-                  desc: "맞춤형 콘텐츠를 기획합니다",
-                  detail: "전략 수립 · 스토리보드 작성",
+                {
+                  step: "02",
+                  title: "업체 분석",
+                  desc: "상권과 현황을 체계적으로 파악",
+                  detail: "경쟁업체 분석 · 시장 조사",
                   icon: <Target className="w-8 h-8" />
                 },
-                { 
-                  step: "03", 
-                  title: "제작", 
-                  desc: "전문가가 직접 제작합니다",
-                  detail: "촬영 · 편집 · 후보정",
+                {
+                  step: "03",
+                  title: "계획 실행",
+                  desc: "데이터 기반 전략 실행",
+                  detail: "최적화 전략 · 운영 시작",
                   icon: <Camera className="w-8 h-8" />
                 },
-                { 
-                  step: "04", 
-                  title: "납품", 
-                  desc: "완성된 콘텐츠를 전달합니다",
-                  detail: "최종 검수 · 파일 전달",
+                {
+                  step: "04",
+                  title: "반복",
+                  desc: "지속적인 개선과 성장",
+                  detail: "성과 분석 · 전략 고도화",
                   icon: <CheckCircle className="w-8 h-8" />
                 }
               ].map((item, index) => (
